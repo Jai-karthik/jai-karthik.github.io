@@ -1,0 +1,232 @@
+:root {
+    --bg-light: #f6f1e5;
+    --text-brown: #5b3d0f;
+    --text-teal: #1b7b89;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --font-title: 'Patrick Hand', cursive;
+    --font-text: 'Roboto Flex', sans-serif;
+}
+
+
+/* Global styles */
+
+body {
+    background-color: var(--bg-light);
+    font-family: var(--font-title);
+    padding-top: 100px;
+    margin: 0;
+}
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20px;
+}
+
+
+/* Navbar layout */
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 80px);
+    flex-grow: 1;
+    /* Align nav items to bottom */
+}
+
+.nav-links a,
+.nav-links-right a {
+    font-family: var(--font-text);
+    font-weight: bold;
+    font-size: clamp(11px, 1.3vw, 17px);
+    color: var(--text-brown);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links-right a:hover {
+    color: var(--text-teal);
+}
+
+.nav-links a::after,
+.nav-links-right a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--text-brown);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after,
+.nav-links-right a:hover::after {
+    width: 100%;
+}
+
+.nav-links-right {
+    display: flex;
+    gap: clamp(10px, 2vw, 25px);
+    justify-content: flex-end;
+}
+
+
+/* Mobile styles */
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #f6f1e5;
+        text-align: center;
+        display: none;
+    }
+    .navbar-toggler {
+        display: block;
+        /* Ensure hamburger is visible on mobile */
+    }
+    .nav-links a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        text-align: right;
+        /* Responsive scaling */
+    }
+    /* Ensure the collapsed navbar links are displayed when the menu is toggled */
+    .navbar-collapse.collapse.show .nav-links {
+        transition: max-height 0.5s ease;
+        display: block;
+        height: auto !important;
+        overflow: hidden;
+    }
+    /* Align Login and Signup to the right side in mobile view */
+    .navbar-nav .nav-links-right {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .nav-links a,
+    .nav-links-right a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .nav-links a:focus,
+    .nav-links a:active,
+    .nav-links-right a:focus,
+    .nav-links-right a:active {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: transform 0.5s ease-in-out;
+    }
+    /* Remove animated underline bar in mobile for clarity */
+    .nav-links a::after,
+    .nav-links-right a::after {
+        content: none;
+    }
+}
+
+
+/* Swiper styles */
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.swiper-slide:hover img {
+    transform: scale(1.05);
+}
+
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #000;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #0056b3;
+}
+
+
+/* Category Section */
+
+.categories-section {
+    background: url('resources/backgrounds/categories-bg.jpg') center center / cover no-repeat;
+    backdrop-filter: brightness(0.9);
+}
+
+.categories-title {
+    text-align: center;
+    color: var(--text-brown);
+    font-family: var(--font-title);
+}
+
+
+/* Category card */
+
+.category-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.1);
+}
+
+.category-card img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.category-card p {
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
