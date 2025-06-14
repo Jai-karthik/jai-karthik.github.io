@@ -74,33 +74,42 @@
         </nav>
     </div>
     <!-- Swiper Container for Auto Transitioning and Page-like Swipe Effect -->
-    <div class="mt-1">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Swiper Slide 1 -->
-                <div class="swiper-slide">
-                    <a href="https://example.com/page1" target="_blank">
-                        <img src="resources/1.jpg" alt="Image 1">
-                    </a>
-                </div>
-                <!-- Swiper Slide 2 -->
-                <div class="swiper-slide">
-                    <a href="https://example.com/page2" target="_blank">
-                        <img src="resources/2.jpg" alt="Image 2">
-                    </a>
-                </div>
-                <!-- Swiper Slide 3 -->
-                <div class="swiper-slide">
-                    <a href="https://example.com/page3" target="_blank">
-                        <img src="resources/3.jpg" alt="Image 3">
-                    </a>
-                </div>
-            </div>
 
-            <!-- Pagination with Dashes -->
-            <div class="swiper-pagination"></div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper" style="background-color: #000000;">
+            <!-- Swiper Slide 1 -->
+            <div class="swiper-slide">
+                <a href="https://example.com/page1" target="_blank">
+                    <picture>
+                        <source srcset="resources/cards/1.jpg" media="(max-width: 767px)">
+                        <img src="resources/1.svg" alt="Image 1" loading="lazy" />
+                    </picture>
+                </a>
+            </div>
+            <!-- Swiper Slide 2 -->
+            <div class="swiper-slide" style="background-color: #000000;">
+                <a href="https://example.com/page2" target="_blank">
+                    <picture>
+                        <source srcset="resources/cards/2.jpg" media="(max-width: 767px)">
+                        <img src="resources/2.svg" alt="Image 1" loading="lazy" />
+                    </picture>
+                </a>
+            </div>
+            <!-- Swiper Slide 3 -->
+            <div class="swiper-slide" style="background-color: #000000;">
+                <a href="https://example.com/page2" target="_blank">
+                    <picture>
+                        <source srcset="resources/cards/3.jpg" media="(max-width: 767px)">
+                        <img src="resources/3.jpg" alt="Image 1" loading="lazy" />
+                    </picture>
+                </a>
+            </div>
         </div>
+
+        <!-- Pagination with Dashes -->
+        <div class="swiper-pagination"></div>
     </div>
+
     <section class="mt-2"></section>
     <section id="categories" class="categories-section text-white py-5">
         <div class="container">
