@@ -371,3 +371,47 @@ body {
         height: 100px;
     }
 }
+
+
+/* Preloader Overlay */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffbe6;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Spinner Animation */
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #e0cfa9;
+    border-top-color: #1b7b89;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+
+/* Spinner Keyframes */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Hide content during load */
+
+body.loading {
+    overflow: hidden;
+}
