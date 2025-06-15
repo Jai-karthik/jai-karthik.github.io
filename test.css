@@ -1,0 +1,133 @@
+body {
+    background-color: #f6f1e5;
+    font-family: 'Patrick Hand', sans-serif;
+    padding-top: 100px;
+}
+
+.header-wrapper {
+    background-color: #f6f1e5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+}
+
+
+/* Logo */
+
+.logo {
+    width: clamp(100px, 15vw, 200px);
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+
+/* Navbar Row */
+
+.navbar-nav {
+    display: flex;
+    align-items: flex-end;
+    /* Bottom-align nav contents to logo */
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* No scrollbars */
+}
+
+
+/* Center nav links */
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 3vw, 30px);
+    flex-grow: 1;
+    margin: 0 20px;
+    min-width: 0;
+    flex-wrap: nowrap;
+}
+
+
+/* Right-aligned links */
+
+.nav-links-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: clamp(10px, 2vw, 25px);
+    flex-shrink: 0;
+}
+
+
+/* Link Style */
+
+.nav-links a,
+.nav-links-right a {
+    text-decoration: none;
+    font-size: clamp(11px, 1.3vw, 17px);
+    color: #5b3d0f;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+}
+
+.nav-links-right a {
+    color: #1b7b89;
+}
+
+
+/* Hover underline */
+
+.nav-links a::after,
+.nav-links-right a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after,
+.nav-links-right a:hover::after {
+    width: 100%;
+}
+
+
+/* Collapse BG */
+
+.navbar-collapse {
+    background-color: #f6f1e5;
+}
+
+
+/* Mobile View */
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .nav-links {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    .nav-links a {
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
+    .nav-links-right {
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+}

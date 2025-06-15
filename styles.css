@@ -122,6 +122,8 @@ body {
     }
     /* Align Login and Signup to the right side in mobile view */
     .navbar-nav .nav-links-right {
+        width: 100%;
+        background-color: #f6f1e5;
         justify-content: flex-end;
         align-items: flex-end;
     }
@@ -158,12 +160,14 @@ body {
 
 /* Mobile: override with taller ratio (e.g., 4:5) */
 
+
+/*
 @media (max-width: 767px) {
     .swiper {
         aspect-ratio: 4 / 5;
         margin-top: 125px;
     }
-}
+}*/
 
 
 /* Slide itself should not stretch height */
