@@ -317,3 +317,57 @@ body {
     background: #1b7b89;
     color: white;
 }
+
+
+/* ─── Shop by Age ───────────────────── */
+
+.shop-by-age-section {
+    background-color: #fdfcf5;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    color: var(--text-brown);
+    font-size: 2rem;
+}
+
+
+/* Circular image frame */
+
+.circle-frame {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* pastel border */
+    transition: transform 0.3s ease;
+}
+
+.circle-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-frame:hover {
+    transform: scale(1.05);
+}
+
+.age-label {
+    font-family: var(--font-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #4e3629;
+}
+
+
+/* Responsive adjustment for mobile view */
+
+@media (max-width: 767px) {
+    .circle-frame {
+        width: 100px;
+        height: 100px;
+    }
+}
