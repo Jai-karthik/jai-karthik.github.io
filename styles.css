@@ -5,6 +5,8 @@
     --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
     --font-title: 'Patrick Hand', cursive;
     --font-text: 'Roboto Flex', sans-serif;
+    --font-product-title: 'Rubik', sans-serif;
+    --font-description: 'Quicksand', sans-serif;
 }
 
 
@@ -463,6 +465,100 @@ body.loading {
     .navbar .container-fluid {
         align-items: center !important;
     }
+}
+
+
+/* ─── Our Process Section ───────────────────────────── */
+
+.our-process-section {
+    border-left: 5px solid #dcdcdc;
+    border-right: 5px solid #dcdcdc;
+    background-color: #fdfcf5;
+}
+
+#process-slider {
+    max-width: calc(300px * 16 / 9);
+    margin: 0 auto;
+}
+
+#process-slider .splide__track {
+    aspect-ratio: 16 / 9;
+    max-height: 300px;
+}
+
+#process-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    #process-slider {
+        max-width: 100%;
+    }
+}
+
+
+/* Product Details Page Styles */
+
+.product-details-section {
+    margin-top: 150px;
+}
+
+.product-title {
+    font-family: var(--font-product-title);
+    color: var(--text-brown);
+}
+
+.product-desc {
+    font-family: var(--font-description);
+    color: var(--text-brown);
+}
+
+.main-image img {
+    width: 80%;
+    border-radius: 12px;
+}
+
+.thumb-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumb-img.selected,
+.thumb-img:hover {
+    border-color: var(--text-teal);
+}
+
+.quantity-field input::-webkit-outer-spin-button,
+.quantity-field input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Hide number input spinners in Firefox and other browsers */
+
+.quantity-field input[type="number"] {
+    appearance: none;
+    -webkit-appearance: none;
+    /* Chrome, Safari, Edge */
+    margin: 0;
+}
+
+.quantity-field input[type="number"] {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.navbar .container-fluid {
+    align-items: center !important;
 }
 
 
