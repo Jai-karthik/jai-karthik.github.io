@@ -667,7 +667,7 @@ body.loading {
 }
 
 .tab-pane-inner {
-    font-family: var(--font-comic-relief);
+    font-family: var(--font-description);
 }
 
 @media (max-width: 767px) {
@@ -678,7 +678,6 @@ body.loading {
         padding: 0 15px;
         margin: 0;
         background: #edd9c7;
-        border: 1px solid #ccc;
         border-top: none;
         border-radius: 0 0 6px 6px;
     }
@@ -695,19 +694,23 @@ body.loading {
     #product-info .nav-link {
         width: 100%;
         text-align: left;
-        border: 1px solid var(--text-teal);
-        border-radius: 6px;
+        border-bottom: 1px solid #e0cfa9;
+        border-top: 1px solid #edd9c7;
+        border-right: 1px solid #edd9c7;
+        border-left: 1px solid #edd9c7;
         font-weight: bold;
-        padding: 10px 15px;
         transition: background-color 0.3s ease;
     }
     #product-info .nav-link.active {
         background-color: var(--text-teal);
-        color: white;
         border-radius: 6px 6px 0 0;
     }
     #product-info .tab-content {
         background: #edd9c7;
         border-top: 0px;
+    }
+    .tab-pane-inner {
+        font-family: var(--font-description);
+        font-size: 15px;
     }
 }
