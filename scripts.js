@@ -17,6 +17,17 @@ AOS.init({
     duration: 1000,
 });
 
+// Initialize Splide for Our Process section
+document.addEventListener('DOMContentLoaded', function () {
+    if (document.getElementById('process-slider')) {
+        new Splide('#process-slider', {
+            type: 'loop',
+            autoplay: true,
+            interval: 3000,
+        }).mount();
+    }
+});
+
 document.addEventListener('click', function(event) {
     const navbar = document.querySelector('.navbar-collapse');
     const toggler = document.querySelector('.navbar-toggler');

@@ -19,6 +19,9 @@
     <!-- Swiper CSS (Image carousel) -->
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <!-- Splide CSS (Our Process slideshow) -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
     <!-- AOS (Scroll Animations) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -113,6 +116,31 @@
         <!-- Pagination with Dashes -->
         <div class="swiper-pagination"></div>
     </div>
+
+    <!-- ★★★ Flowing Cards Section ★★★ -->
+    <section id="flowing-cards" class="flowing-cards-section py-5 text-center">
+        <div class="container overflow-hidden">
+            <div class="card-track d-flex align-items-center">
+                <img src="resources/Cards/1.png" alt="Card 1" class="mx-2" loading="lazy">
+                <img src="resources/Cards/2.png" alt="Card 2" class="mx-2" loading="lazy">
+                <img src="resources/Cards/3.png" alt="Card 3" class="mx-2" loading="lazy">
+                <img src="resources/Cards/4.png" alt="Card 4" class="mx-2" loading="lazy">
+                <img src="resources/Cards/5.png" alt="Card 5" class="mx-2" loading="lazy">
+                <img src="resources/Cards/6.png" alt="Card 6" class="mx-2" loading="lazy">
+                <img src="resources/Cards/7.png" alt="Card 7" class="mx-2" loading="lazy">
+                <img src="resources/Cards/8.png" alt="Card 8" class="mx-2" loading="lazy">
+                <img src="resources/Cards/1.png" alt="Card 1" class="mx-2" loading="lazy">
+                <img src="resources/Cards/2.png" alt="Card 2" class="mx-2" loading="lazy">
+                <img src="resources/Cards/3.png" alt="Card 3" class="mx-2" loading="lazy">
+                <img src="resources/Cards/4.png" alt="Card 4" class="mx-2" loading="lazy">
+                <img src="resources/Cards/5.png" alt="Card 5" class="mx-2" loading="lazy">
+                <img src="resources/Cards/6.png" alt="Card 6" class="mx-2" loading="lazy">
+                <img src="resources/Cards/7.png" alt="Card 7" class="mx-2" loading="lazy">
+                <img src="resources/Cards/8.png" alt="Card 8" class="mx-2" loading="lazy">
+            </div>
+        </div>
+    </section>
+
 
     <!-- ★★★ Shop by Age Section ★★★ -->
     <section id="shop-by-age" class="shop-by-age-section py-5 text-center">
@@ -221,6 +249,25 @@
         </div>
     </section>
 
+    <!-- Our Process Section -->
+    <section id="our-process" class="our-process-section py-4 text-center">
+        <div class="container">
+            <h2 class="section-title mb-4">Our Process</h2>
+            <div id="process-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="resources/process/1.png" alt="Process step 1"></li>
+                        <li class="splide__slide"><img src="resources/process/2.png" alt="Process step 1"></li>
+                        <li class="splide__slide"><img src="resources/process/3.png" alt="Process step 1"></li>
+                        <li class="splide__slide"><img src="resources/process/4.png" alt="Process step 1"></li>
+                        <li class="splide__slide"><img src="resources/process/5.png" alt="Process step 1"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Footer Section -->
     <footer class="footer text-white pt-5 pb-4">
         <div class="container text-md-left">
@@ -282,6 +329,9 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <!-- AOS (Scroll Animations) JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
