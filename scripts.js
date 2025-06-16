@@ -18,7 +18,7 @@ AOS.init({
 });
 
 // Initialize Splide for Our Process section
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('process-slider')) {
         new Splide('#process-slider', {
             type: 'loop',
@@ -39,7 +39,8 @@ document.addEventListener('click', function(event) {
         bsCollapse.hide(); // Collapse the menu
     }
 });
-document.addEventListener('DOMContentLoaded', function () {
+
+document.addEventListener('DOMContentLoaded', function() {
     const mainImage = document.getElementById('mainImage');
     const thumbs = document.querySelectorAll('.thumb-img');
     let slideIndex = 0;
@@ -85,5 +86,45 @@ document.addEventListener('DOMContentLoaded', function () {
             qtyInput.value = Math.max(1, parseInt(qtyInput.value) - 1);
         });
     }
-});
 
+    // ✅ Mobile Accordion Tabs Behavior
+    // ✅ Mobile Accordion Tabs Behavior
+    if (window.innerWidth <= 767) {
+  const tabs = document.querySelectorAll('#product-info .nav-link');
+  const tabPanes = document.querySelectorAll('#product-info .tab-pane');
+
+  // Clean up Bootstrap active classes
+  document.querySelector('#product-info .nav-link.active')?.classList.remove('active');
+  document.querySelector('#product-info .tab-pane.show.active')?.classList.remove('show', 'active');
+
+  // Move panes below tab and collapse all
+  tabs.forEach(tab => {
+    const pane = document.querySelector(tab.dataset.bsTarget);
+    if (pane) {
+      tab.closest('li').after(pane);
+      pane.style.height = '0px';
+    }
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetPane = document.querySelector(this.dataset.bsTarget);
+      const isActive = this.classList.contains('active');
+
+      // Collapse all
+      tabs.forEach(t => t.classList.remove('active'));
+      tabPanes.forEach(p => p.style.height = '0px');
+
+      if (!isActive && targetPane) {
+        this.classList.add('active');
+        const inner = targetPane.querySelector('.tab-pane-inner');
+        const scrollHeight = inner.scrollHeight;
+        targetPane.style.height = scrollHeight + 'px';
+      }
+    });
+  });
+}
+
+
+});
